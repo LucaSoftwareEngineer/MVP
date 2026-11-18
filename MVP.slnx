@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="MVP-Backend/MVP-Backend.csproj" />
+  <Project Path="MVP-Frontend/MVP-Frontend.csproj" />
 </Solution>
