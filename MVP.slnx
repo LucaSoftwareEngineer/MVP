@@ -1,1 +1,3 @@
-<Solution />
+<Solution>
+  <Project Path="MVP-Backend/MVP-Backend.csproj" />
+</Solution>
