@@ -1,0 +1,25 @@
+services:
+  mvp-backend:
+    image: ${DOCKER_REGISTRY-}mvpbackend
+    build:
+      context: .
+      dockerfile: MVP-Backend/Dockerfile
+    depends_on:
+      - sqlserver
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=DEV_MVP;User Id=sa;Password=Admin12345678!;TrustServerCertificate=True;
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_mvp
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Admin12345678!
+      - MSSQL_PID=Express
+    ports:
+      - "16433:1433"
+    volumes:
+      - sqldata_mvp:/var/opt/mssql
+
+volumes:
+  sqldata_mvp:
