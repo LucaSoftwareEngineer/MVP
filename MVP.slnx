@@ -1,5 +1,9 @@
 <Solution>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
   <Project Path="MVP-Backend/MVP-Backend.csproj" />
+  <Project Path="MVP-Data/MVP-Data.csproj" Id="b5ede2cf-8ec5-48db-89d4-d71ef8302f66" />
   <Project Path="MVP-Domain/MVP-Domain.csproj" />
   <Project Path="MVP-Frontend/MVP-Frontend.csproj" />
 </Solution>
